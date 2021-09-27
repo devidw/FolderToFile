@@ -1,6 +1,6 @@
 = FolderToFile
 
-Merge all source files inside a folder recursively into a singel PDF file
+Merge all source files inside a folder recursively into a single PDF file
 
 [source, php]
 ----
