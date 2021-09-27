@@ -2,6 +2,7 @@
 
 Merge all source files inside a folder recursively into a single PDF file
 
+== Usage
 [source, php]
 ----
 require_once(dirname(__DIR__).'/src/FolderToFile.class.php');
@@ -12,3 +13,7 @@ $merger = new FolderToFile(
     allowedExtensions: ['php']
 );
 ----
+
+== Requirements
+* PHP 8
+* `asciidoctor-pdf`
