@@ -1,0 +1,22 @@
+
+./index.php
+[source, php]
+----
+<?php
+
+// Silence is golden.
+
+----
+
+<<<
+
+./test/index.php
+[source, php]
+----
+<?php
+
+// Silence is golden.
+
+----
+
+<<<
