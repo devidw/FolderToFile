@@ -1,7 +1,9 @@
 <?php
 
 /**
+ * FolderToFile
  *
+ * @author David Wolf <david@wolf.gdn>
  */
 class FolderToFile
 {
