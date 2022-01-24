@@ -2,7 +2,7 @@
 
 Merge all source files inside a folder recursively into a single PDF file
 
-NOTE: Requires Asciidoctor PDF ('asciidoctor-pdf').
+NOTE: Requires Asciidoctor PDF.
 
 == Usage
 [source, php]
