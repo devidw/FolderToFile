@@ -1,8 +1,16 @@
-= FolderToFile
+= Folder To File
+:note-caption: :information_source:
 
 Merge all source files inside a folder recursively into a single PDF file.
 
-NOTE: Requires Asciidoctor PDF.
+NOTE: Requires a https://github.com/asciidoctor/asciidoctor-pdf[`asciidoctor-pdf`] installation on the current `PATH` to be able to generate `.pdf` files
+
+== Installation
+
+[source]
+----
+composer require devidw/folder-to-file
+----
 
 == Usage
 [source, php]
