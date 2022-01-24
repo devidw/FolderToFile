@@ -1,10 +1,9 @@
 = FolderToFile
 
-Merge all source files inside a folder recursively into a single PDF file.
+Merge all source files inside a folder recursively into a single PDF file
 
 == Usage
-
-[source,php]
+[source, php]
 ----
 <?php
 
@@ -22,9 +21,7 @@ $merger = new FolderToFile(
 );
 ----
 
-
 == Testing
-
 [source,zsh]
 ----
 php ./tests/test.php
