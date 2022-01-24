@@ -1,0 +1,20 @@
+{
+    "name": "devidw/folder-to-file",
+    "description": "Merge all source files inside a folder recursively into a single PDF file.",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Devidw\\FolderToFile\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "David Wolf",
+            "email": "david@wolf.gdn"
+        }
+    ],
+    "minimum-stability": "alpha",
+    "require": {
+        "php": ">=8.0.0"
+    }
+}

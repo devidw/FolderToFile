@@ -1,13 +1,36 @@
 <?php
 
+namespace Devidw\FolderToFile;
+
 /**
- *
+ * Merge the contents of all sources files from a folder into a singe PDF file.
+ * 
+ * @version 1.0.0
+ * @author devidw
  */
 class FolderToFile
 {
-    public $files;
-    public $adoc;
+    /**
+     * Files to get contents from
+     * 
+     * @var array
+     */
+    public array $files;
 
+    /**
+     * AsciiDoc document
+     * 
+     * @var string
+     */
+    public string $adoc;
+
+    /**
+     * Constructor
+     * 
+     * @param string $inputDir
+     * @param string $outputFile
+     * @param array allowedExtensions
+     */
     public function __construct(
         public string $inputDir,
         public string $outputFile,
@@ -22,7 +45,7 @@ class FolderToFile
      * @param string $path
      * @return string
      */
-    public function getExtension(string $path)
+    public function getExtension(string $path): string
     {
         $parts = pathinfo($path);
         $extension = $parts['extension'];
@@ -42,9 +65,9 @@ class FolderToFile
     /**
      * @see https://stackoverflow.com/a/24784020/13765033
      */
-    public function getFileList()
+    public function getFileList(): void
     {
-        $rii = new RecursiveIteratorIterator(new RecursiveDirectoryIterator($this->inputDir));
+        $rii = new \RecursiveIteratorIterator(new \RecursiveDirectoryIterator($this->inputDir));
         foreach ($rii as $file) {
             if ($file->isDir()) {
                 continue;
@@ -56,9 +79,9 @@ class FolderToFile
     }
 
     /**
-     *
+     * Merge all contents into AsciiDoc
      */
-    public function merge()
+    private function merge(): void
     {
         $this->adoc = '';
         foreach ($this->files as $file) {
@@ -80,9 +103,11 @@ class FolderToFile
     }
 
     /**
-     *
+     * Generate the output PDF
+     * 
+     * @return string|null|bool
      */
-    public function generate()
+    private function generate(): string|null|bool
     {
         $written = file_put_contents($this->outputFile, $this->adoc);
         if ($written) {
