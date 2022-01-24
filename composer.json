@@ -15,7 +15,6 @@
     ],
     "minimum-stability": "alpha",
     "require": {
-        "php": ">=8.0.0",
-        "asciidoctor-pdf": "^1.6.1"
+        "php": ">=8.0.0"
     }
 }
